@@ -1,0 +1,39 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Tu pronostico!</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+  <ion-card *ngFor="let item of dataList">
+
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="assets/img/marty-avatar.png">
+      </ion-avatar>
+      <h2>{{item[6]}}</h2>     
+      <h1>{{item[7]}}</h1>    
+    </ion-item>
+
+    <img src="assets/img/rankings/demo.jpg">
+
+    <ion-card-content>
+      <p>viento: <span>{{item[0]}}</span> nudos</p>
+      <p>rafaga: <span>{{item[1]}}</span> nudos</p>
+      <p>periodo: <span>{{item[2]}}</span></p>
+      <p>ola: <span>{{item[3]}}</span> metros</p>
+      <p>direccion viento: <span>{{item[4]}}</span> º</p>
+      <p>direccion ola: <span>{{item[5]}}</span> º</p>
+
+    </ion-card-content>
+
+
+  </ion-card>
+
+
+  
+</ion-content>

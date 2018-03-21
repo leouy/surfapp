@@ -1,0 +1,52 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{ item.name }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <div class="item-profile" text-center #profilePic [style.background-image]="'url(' + item.profilePic + ')'">
+  </div>
+
+  <div class="item-detail" padding>
+    <h2>{{item.name}}</h2>
+    <p>{{item.about}}</p>
+
+    </div>
+    <div class="item-detail" padding>
+    <p>
+      Selecciona hora:
+      <ion-item>
+        <ion-select [(ngModel)]="hour" id="hourselect">
+          <ion-option value="6">06</ion-option>
+          <ion-option value="9">09</ion-option>
+          <ion-option value="12">12</ion-option>
+        </ion-select>
+      </ion-item>
+      
+    </p>
+    <p>
+      Selecciona dia:
+      <ion-item>
+        <ion-select [(ngModel)]="day" id="dayselect">
+          <ion-option value="f">Hoy</ion-option>
+          <ion-option value="m">Mañana</ion-option>
+        </ion-select>
+      </ion-item>
+     
+    </p>
+
+  
+        <button ion-button color="primary" block (click)="verPronostico()">Ver pronostico</button>
+    
+  </div>
+    <!--<div class="item-detail" padding>
+    
+
+  </div>-->
+
+ 
+</ion-content>
